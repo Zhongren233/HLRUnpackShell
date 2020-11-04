@@ -6,7 +6,7 @@ foreach ($file in $fileList) {
     .\bin\bnkextr.exe $file
     $wemList = Get-ChildItem *.wem -name
     foreach ($wem in $wemList) {
-        .\bin\ww2ogg024\ww2ogg.exe $wem --pcb .\bin\ww2ogg\packed_codebooks_aoTuV_603.bin
+        .\bin\ww2ogg024\ww2ogg.exe $wem --pcb .\bin\ww2ogg024\packed_codebooks_aoTuV_603.bin
     }
     mkdir $outDir
     Move-Item *.ogg $outDir
